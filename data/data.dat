@@ -1,0 +1,57 @@
+# datos.dat
+
+# 1. Conjunto de nodos
+set NODES := 1 2 3 4 5 ;
+
+# 2. Parámetro escalar
+param u := 0.5 ;   # costo unitario (USD/km·unidad)
+
+# 3. Demandas h_i
+param h :=
+  1 1100
+  2 1200
+  3 550
+  4 820
+  5 880
+;
+
+# 4. Costos fijos f_j (USD)
+param f :=
+  1 310
+  2 250
+  3 80
+  4 120
+  5 260
+;
+
+# 5. Matriz de distancias d[i,j] (km)
+param d :=
+  1 1 0
+  1 2 4.2
+  1 3 2.7
+  1 4 2.3
+  1 5 2.2
+  2 1 4.2
+  2 2 0
+  2 3 1.9
+  2 4 3.7
+  2 5 6.4
+  3 1 2.7
+  3 2 1.9
+  3 3 0
+  3 4 2.6
+  3 5 4.9
+  4 1 2.3
+  4 2 3.7
+  4 3 2.6
+  4 4 0
+  4 5 5.6
+  5 1 2.2
+  5 2 6.4
+  5 3 4.9
+  5 4 5.6
+  5 5 0
+;
+
+# 6. Parámetro p (número de CDs), se fija en tiempo de ejecución
+param p ;
